@@ -23,13 +23,12 @@ public class Tarjeton{
 	private boolean[] candidatos;
 	
 	
+	//Metodos
 
 	public String darTipoTarjeton(){
 		
-		String tipo = "";
-		
-		int totalMarcados = 0;
-		
+		String tipo = "";	
+		int totalMarcados = 0;	
 		for(int i = 0; i<candidatos.length && totalMarcados<2; i++){		
 				if(candidatos[i]){
 					totalMarcados++;
@@ -47,9 +46,6 @@ public class Tarjeton{
 		}else{
 			tipo = INVALIDO;
 		}
-		
-		
-		
 		return tipo;
 	}
 
