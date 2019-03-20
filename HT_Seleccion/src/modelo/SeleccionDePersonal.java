@@ -45,7 +45,16 @@ public class SeleccionDePersonal {
 	public String encontrarZonaConMasCandidatosSuperanUmbral(){
 		//TODO
 		
-		return "Para implementar";
+		ZonaReclutamiento zr = zonasRecluta[0];
+		
+		for(int i = 1; i< zonasRecluta.length; i++){
+			
+			if(zonasRecluta[i].contarCandidatosSuperanUmbral() > zr.contarCandidatosSuperanUmbral()){
+				zr = zonasRecluta[i];
+			}
+		}
+		
+		return "La zona de reclutamiento con mayor candidatos que superan el Umbral es "+zr.darPais() + " con "+zr.contarCandidatosSuperanUmbral() ;
 	}
 	
 	public double calcularPorcentajeTotalMujeres(){

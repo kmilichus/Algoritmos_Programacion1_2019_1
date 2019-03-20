@@ -83,4 +83,13 @@ public class Candidato {
 			actitud = 5;
 		}
 	}
+	
+		public double calcularCalificacionCandidato(){
+		double caliCandi = 0;
+		caliCandi = SeleccionDePersonal.PESO_COMUNICACION*habilidadesComunicacion
+				  + SeleccionDePersonal.PESO_LABORAL*historiaLaboral
+				  + SeleccionDePersonal.PESO_TECNICA*competenciaTecnica
+				  + SeleccionDePersonal.PESO_ACTITUD*actitud;
+		return caliCandi;
+	}
 }

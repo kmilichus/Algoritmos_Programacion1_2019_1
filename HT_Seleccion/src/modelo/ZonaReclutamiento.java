@@ -51,4 +51,16 @@ public class ZonaReclutamiento {
 	public void filtrarMenoresAValor(double valor) {
 		//TODO	
 	}
+	
+	public int contarCandidatosSuperanUmbral(){
+		int cantidad = 0;
+
+		for (int i = 0; i < candidatos.size(); i++) {
+			if(candidatos.get(i).calcularCalificacionCandidato() > SeleccionDePersonal.UMBRAL){
+				cantidad++;
+			}
+		}
+		
+		return cantidad;
+	}
 }
